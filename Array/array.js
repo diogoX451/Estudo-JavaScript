@@ -1,6 +1,7 @@
 // Array é uma lista de coisas que podemos adicionar em um array
 // Todo array começa com indice 0
 // Para puxar um lista de coisas usa coxetes []
+// Todo array é um Objeto
 const arrayCidade = ["São Paulo", "Rio de Janeiro", "Belo Horizonte"];
 console.log(arrayCidade);
 
@@ -23,3 +24,9 @@ console.log(arrayCidade);
 //Pode salvar o que foi removido em uma variavel
 let remove = arrayCidade.pop();
 console.log(`O elemento que foi removido foi ${remove}`);
+
+//Selecionar varios elementos no Array ultilizar .slice
+console.log(arrayCidade.slice(0, 2));
+
+//testar se é um array
+console.log(arrayCidade instanceof Array);
