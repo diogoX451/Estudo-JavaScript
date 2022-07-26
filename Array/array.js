@@ -30,3 +30,14 @@ console.log(arrayCidade.slice(0, 2));
 
 //testar se é um array
 console.log(arrayCidade instanceof Array);
+
+//Logicas em questão de Array
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let b = a;
+console.log(b);
+// nesse caso b esta sendo referenciado ao Array de A
+// no entanto
+let c = [...b, 2];
+let d = c;
+console.log(d);
+// nesse caso d esta sendo referenciado ao Array de C
