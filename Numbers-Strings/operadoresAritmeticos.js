@@ -37,14 +37,14 @@ console.log(num3);
 //Potenciação
 num3 = num1 ** num2;
 while (num3 <= 100) {
-    num3++;
-    console.log(num3);
+  num3++;
+  console.log(num3);
 }
 
 //converter string para numero
-const num4 = parseInt('5');
+const num4 = parseInt("5");
 console.log(typeof num4);
 
 //converter string para numero com ponto flutuante
-const num5 = parseFloat('5.5'); // retorna 5.5 em numero
+const num5 = parseFloat("5.5"); // retorna 5.5 em numero
 console.log(typeof num5);
