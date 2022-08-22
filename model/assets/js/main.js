@@ -12,32 +12,29 @@ const calcImc = () => {
         altura: altura,
         resultado: peso / (altura * altura),
         date() {
-          result.push(this.resultado);
-          if (this.resultado <= 18.5) {
-            read.innerHTML = `Peso Normal`;
-          }
-          if (this.resultado >= 24.9) {
-            read.innerHTML = `Peso Ideal`;
-          }
-          if (this.resultado >= 29.9) {
-            read.innerHTML = `Acima do Peso`;
-          }
-          if (this.resultado >= 34.9) {
-            read.innerHTML = `Obesidade I`;
-          }
-          if (this.resultado >= 39.9) {
-            read.innerHTML = `Obesidade II (severa)`;
-          }
-          if (this.resultado >= 40) {
-            read.innerHTML = `Obesidade III (mórbida)`;
-          }
+          result.push(Math.floor(this.resultado));
         },
       };
     };
     imc().date();
     console.log(result);
+    if (result <= 18.5) {
+      read.innerHTML = `Peso Normal`;
+    } else if (result >= 25) {
+      read.innerHTML = `Peso Ideal`;
+    } else if (result >= 30) {
+      read.innerHTML = `Acima do Peso`;
+    } else if (result >= 35) {
+      read.innerHTML = `Obesidade I`;
+    } else if (result >= 40) {
+      read.innerHTML = `Obesidade II (severa)`;
+    } else if (result >= 41) {
+      read.innerHTML = `Obesidade III (mórbida)`;
+    }
   };
   formClass.addEventListener("submit", formEvent);
 };
 
 calcImc();
+
+
