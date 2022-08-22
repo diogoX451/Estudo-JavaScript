@@ -36,5 +36,3 @@ const calcImc = () => {
 };
 
 calcImc();
-
-
